@@ -1,0 +1,106 @@
+#openlog{
+  position: fixed;
+  background: rgba(200, 200, 200, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  visibility: hidden;
+}
+#log{
+  background-color: #00bfb4;
+  box-shadow: 0px 0px 10px #000;
+  color: #fff;
+  margin: 10% auto;
+  margin-top: 200px;
+  padding: 20px;
+  position: relative;
+  width: 400px;
+  width: 500px;
+  height: 320px;
+}
+#btn-inicio{
+  background-color: rgb(65, 111, 159);
+  color: white;
+  text-decoration: none;
+  text-decoration-color: currentcolor;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  cursor: pointer;
+  border: none;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+}
+section.log{
+	background-color: #111;
+	box-shadow: 0px 0px 10px #000;
+	color: #fff;
+	margin: 10% auto;
+  margin-top: 100px;
+	padding: 20px;
+	position: relative;
+	width: 400px;
+}
+#text-log-box{
+	color: #fff;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+#close-logbox{
+  background-color: rgb(65, 111, 159);
+  color: white;
+  font-size: 20px;
+  cursor: pointer
+}
+#close-logbox.close{
+	background-color: transparent;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 22px;
+	position: absolute;
+	right: 5px;
+	top:5px;
+	text-align: center;
+	text-decoration: none;
+	width: 28px;
+}
+close-logbox.close{
+	background-color: rgb(65, 111, 159);
+}
+#panel-log, #datos-ingreso{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form input{
+  font-size: 23px;
+  width: 300px;
+  color: rgb(46, 46, 46);
+  text-indent: 20px;
+  margin-bottom: 15px;
+}
+section #logo{
+  width: 100px;
+  height: 30px;
+  margin: auto;
+}
+#close-logbox{
+  background-color: rgb(65, 111, 159);
+  margin: auto;
+  padding: 3px;
+  margin-left: 330px;
+}
+#panel-log-links:link{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+#panel-log-links:hover{
+  text-decoration: underline;
+  font-weight: bold;
+}

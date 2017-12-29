@@ -1,0 +1,38 @@
+section{
+  width: 70%;
+  background-color: rgba(240, 240, 240, 0.5);
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#description-video-text{
+  width: 80%;
+}
+#box-list-courses{
+  background-color: rgba(221, 221, 221, 0.5);
+  width: 80%;
+  margin-top: 3%;
+}
+#title-box-videos-courses{
+  margin: 2%;
+}
+#list-videos{
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video-course-link-box{
+  width: 100%;
+}
+.link-video-course:link{
+  color: rgb(35, 166, 184);
+  text-decoration: none;
+  font-size: 25px;
+  margin: auto;
+}
+footer{
+  margin-top: 0;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        window.onload = function(){
+        //Inicializamos el canvas
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var imageObj = new Image();
+        imageObj.onload = function() {
+            ctx.drawImage(imageObj, 0, 0);
+        };
+        imageObj.src = 'img/slideshows/slide-index/curso.jpg';
+        //Atributos Nieve
+        var tc = 1200; //Total de copos de nieve
+        var tamCopo=4;//Tamaño maximo de los copos
+        var tamMin=2;//Tamaño minimo de los copos
+        var capas=5;//Capas distintas en las que caerá la nieve
+        var fsenx=0.4;//Balanceo horizontal
+        var fcosy=2;//Balanceo vertical
+        var viento=1;//Factor viento
+        var gravedad=4;//Gravedad
+        var faleatorio=100;
+        var fps=60;
+        //canvas dimensions
+        var W =  canvas.width;
+        var H =  canvas.height;
+        var copos = [];//Array con las posiciones de los copos de nieve
+        for(var i = 0; i < tc; i++)
+        {
+            copos.push({
+                x: Math.random()*W, //x
+                y: Math.random()*H, //y
+                t: Math.random()*tamCopo+tamMin, //Tamano
+                p: Math.random()*faleatorio
+            })
+        }
+        function dibujar(){
+            ctx.clearRect(0, 0, W, H);
+            ctx.drawImage(imageObj, 0, 0);
+            ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+            ctx.beginPath();
+            for(var i = 0; i < tc; i++)
+            {
+                var p = copos[i];
+                ctx.moveTo(p.x, p.y);
+                ctx.rect(p.x, p.y, p.t, p.t);
+            }
+            ctx.fill();
+            nevar();
+        }
+
+        var cnt=0;//Contador de ciclos realizados util para calcular el seno o coseno del movimiento de los copos
+        function nevar()//Actualiza la posición de los copos de nieve
+        {
+            cnt+=0.01;
+            for(var i = 0; i < tc; i++)
+            {
+                var p = copos[i];
+                p.x += Math.sin(cnt+ p.p)*fsenx+viento;
+                p.y += ((Math.cos(cnt+ p.p)+1)*fcosy+ p.t/2)*gravedad/9.8;
+                if(p.y > H)
+                {
+                        copos[i] = {
+                            x: Math.random()*W, //x
+                            y: -10, //y
+                            t: Math.random()*tamCopo+tamMin, //Tamano
+                            p: Math.random()*faleatorio
+                        };
+
+                }
+                if(p.y < -10)
+                {
+                    copos[i] = {
+                        x: Math.random()*W, //x
+                        y: H, //y
+                        t: Math.random()*tamCopo+tamMin, //Tamano
+                        p: Math.random()*faleatorio
+                    };
+
+                }
+                if(p.x > W){
+                    copos[i].x=0;
+                }
+                if(p.x<0){
+                    copos[i].x=W;
+                }
+            }
+        }
+            setInterval(dibujar, 1000/fps);
+    }
+    </script>
+</head>
+<body style="">
+<canvas id="canvas" width="800" height="500" style="border:1px solid">
+  asdasdasdasdasdsad sdfasdfsadf
+  <img src="img/slideshows/slide-index/diseno.jpg" alt="">
+</canvas>
+</body>
+</html>

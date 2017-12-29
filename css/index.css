@@ -1,0 +1,114 @@
+aside{
+  height: 100%;
+}
+.box-courses{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50%;
+}
+#box-courses-2{
+  margin-top: 30px;
+}
+#box-course{
+  background-image: url(../img/cursos/programacion-web.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  min-height: 250px;
+  width: 30%;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#box-course1{
+  background-image: url(../img/cursos/programacion-python.png);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  min-height: 250px;
+  width: 30%;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#box-course2{
+  background-image: url(../img/cursos/programacion-c++.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  min-height: 250px;
+  width: 30%;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#box-course3{
+  background-image: url(../img/cursos/programacion-java.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  min-height: 250px;
+  width: 30%;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#box-course4{
+  background-image: url(../img/cursos/programacion-ruby.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  min-height: 250px;
+  width: 30%;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#box-course5{
+  background-image: url(../img/cursos/programacion-arduino.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  min-height: 250px;
+  width: 30%;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+
+
+p{
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+}
+li{
+  list-style: none;
+}
+#text-side{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3%;
+  height: 20%;
+  min-height: 80px;
+}
+#link-box-course:link, #link-box-course:visited{
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+#link-box-course:hover{
+  color: rgba(147, 145, 145, 0.65)
+}

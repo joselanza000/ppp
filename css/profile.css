@@ -1,0 +1,11 @@
+#first-content-box{
+  display: flex;
+  flex-direction: row;
+}
+.icon-medallas-medalla-HTML{
+  background-image: url(../img/profile/Medalla_de_Bronce.png);
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+}
